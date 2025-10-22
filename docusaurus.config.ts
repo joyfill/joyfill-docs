@@ -16,13 +16,13 @@ const config: Config = {
 
   // Set the production url of your site here
   // For GitHub Pages: https://<USERNAME>.github.io
-  url: 'https://YOUR_GITHUB_USERNAME.github.io',
+  url: 'https://VishnuBishnoi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/joyfill-docs/',
 
   // GitHub pages deployment config.
-  organizationName: 'YOUR_GITHUB_USERNAME', // Usually your GitHub org/user name.
+  organizationName: 'VishnuBishnoi', // Usually your GitHub org/user name.
   projectName: 'joyfill-docs', // Usually your repo name.
   
   deploymentBranch: 'gh-pages',
