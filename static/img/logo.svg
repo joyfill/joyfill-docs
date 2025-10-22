@@ -1,15 +1,12 @@
-<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Joyfill Logo -->
-  <g>
-    <!-- Logo Icon - Simplified form/document symbol -->
-    <rect x="2" y="4" width="20" height="24" rx="2" fill="#0066FF"/>
-    <rect x="6" y="9" width="12" height="2" rx="1" fill="white"/>
-    <rect x="6" y="13" width="12" height="2" rx="1" fill="white"/>
-    <rect x="6" y="17" width="8" height="2" rx="1" fill="white"/>
-    
-    <!-- Text: Joyfill -->
-    <text x="28" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="currentColor">
-      Joyfill
-    </text>
-  </g>
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Joyfill Logo - Icon + Text -->
+  
+  <!-- Blue square background with smile icon -->
+  <rect width="32" height="32" rx="4" fill="#0066FF"/>
+  
+  <!-- White smile curve -->
+  <path d="M8 18C8 18 11 22 16 22C21 22 24 18 24 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Joyfill Text -->
+  <text x="40" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="currentColor" letter-spacing="-0.5">Joyfill</text>
 </svg>

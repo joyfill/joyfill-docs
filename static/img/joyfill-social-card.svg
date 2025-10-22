@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Joyfill Social Media Card -->
+  
+  <!-- Background gradient -->
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Large centered logo icon -->
+  <rect x="484" y="199" width="232" height="232" rx="24" fill="white"/>
+  <path d="M542 315C542 315 563.5 343 600 343C636.5 343 658 315 658 315" stroke="#0066FF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Joyfill text below -->
+  <text x="600" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">Joyfill</text>
+  <text x="600" y="550" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="rgba(255,255,255,0.9)" text-anchor="middle">Developer Documentation</text>
+</svg>
+

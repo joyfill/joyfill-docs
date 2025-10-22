@@ -92,8 +92,8 @@ const config: Config = {
     ],
   ],
 
-  themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+      themeConfig: {
+        image: 'img/joyfill-social-card.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
