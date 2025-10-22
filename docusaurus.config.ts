@@ -15,13 +15,18 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://docs.joyfill.io',
+  // For GitHub Pages: https://<USERNAME>.github.io
+  url: 'https://YOUR_GITHUB_USERNAME.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/joyfill-docs/',
 
   // GitHub pages deployment config.
-  organizationName: 'joyfill',
-  projectName: 'joyfill-docs',
+  organizationName: 'YOUR_GITHUB_USERNAME', // Usually your GitHub org/user name.
+  projectName: 'joyfill-docs', // Usually your repo name.
+  
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
