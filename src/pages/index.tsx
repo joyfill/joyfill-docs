@@ -59,18 +59,20 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Documentation for Joyfill SDKs across all platforms">
+      description="Embeddable form builder SDKs for developers. Add powerful form and document capabilities to your web and mobile applications.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <Heading as="h1" className="hero__title">
-            {siteConfig.title}
+            Developer Documentation
           </Heading>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <p className="hero__subtitle">
+            Embeddable form builder SDKs for iOS, Android, React Native, and Web
+          </p>
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
               to="/ios/introduction">
-              Get Started
+              Get Started →
             </Link>
           </div>
         </div>
@@ -92,20 +94,20 @@ export default function Home(): JSX.Element {
         <section className={styles.features}>
           <div className="container">
             <Heading as="h2" className="text--center margin-bottom--lg">
-              Why Joyfill?
+              Why Developers Choose Joyfill
             </Heading>
             <div className="row">
               <div className="col col--4">
-                <h3>🚀 Easy Integration</h3>
-                <p>Get started in minutes with our simple, well-documented APIs.</p>
+                <h3>⚡ Quick Integration</h3>
+                <p>Add powerful form capabilities to your app in minutes with our embeddable SDKs and comprehensive documentation.</p>
               </div>
               <div className="col col--4">
                 <h3>🎨 Fully Customizable</h3>
-                <p>Customize every aspect to match your brand and requirements.</p>
+                <p>Customize forms to match your brand. Build dynamic forms with enhanced fields, validation, and complex data structures.</p>
               </div>
               <div className="col col--4">
-                <h3>🔒 Secure by Default</h3>
-                <p>Enterprise-grade security with GDPR and HIPAA compliance.</p>
+                <h3>🔒 Enterprise Ready</h3>
+                <p>Production-grade security with GDPR compliance. Trusted by 1000+ companies for mission-critical applications.</p>
               </div>
             </div>
           </div>

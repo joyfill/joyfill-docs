@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Joyfill Documentation',
-  tagline: 'Powerful form SDKs for every platform',
+  tagline: 'Embeddable form builder SDKs for developers',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -141,19 +141,19 @@ const config: Config = {
           title: 'SDKs',
           items: [
             {
-              label: 'iOS SDK',
+              label: 'iOS (Swift)',
               to: '/ios/introduction',
             },
             {
-              label: 'Kotlin SDK',
+              label: 'Android (Kotlin)',
               to: '/kotlin/introduction',
             },
             {
-              label: 'React Native SDK',
+              label: 'React Native',
               to: '/react-native/introduction',
             },
             {
-              label: 'Web SDK',
+              label: 'Web (JavaScript)',
               to: '/web/introduction',
             },
           ],
@@ -169,18 +169,26 @@ const config: Config = {
               label: 'Guides',
               to: '/ios/guides/modes/modes',
             },
+            {
+              label: 'Joyfill Website',
+              href: 'https://joyfill.io',
+            },
           ],
         },
         {
-          title: 'Community',
+          title: 'Company',
           items: [
             {
               label: 'GitHub',
               href: 'https://github.com/joyfill',
             },
             {
-              label: 'Support',
+              label: 'Developer Support',
               href: 'https://joyfill.io/support',
+            },
+            {
+              label: 'Blog',
+              href: 'https://joyfill.io/blog',
             },
           ],
         },
