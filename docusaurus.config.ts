@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Joyfill Documentation',
+  tagline: 'Powerful form SDKs for every platform',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,52 +15,71 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.joyfill.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'joyfill',
+  projectName: 'joyfill-docs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ios',
+        path: 'docs/ios',
+        routeBasePath: 'ios',
+        sidebarPath: './sidebars.ts',
+        editUrl: 'https://github.com/joyfill/joyfill-docs/edit/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'kotlin',
+        path: 'docs/kotlin',
+        routeBasePath: 'kotlin',
+        sidebarPath: './sidebars.ts',
+        editUrl: 'https://github.com/joyfill/joyfill-docs/edit/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'react-native',
+        path: 'docs/react-native',
+        routeBasePath: 'react-native',
+        sidebarPath: './sidebars.ts',
+        editUrl: 'https://github.com/joyfill/joyfill-docs/edit/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'web',
+        path: 'docs/web',
+        routeBasePath: 'web',
+        sidebarPath: './sidebars.ts',
+        editUrl: 'https://github.com/joyfill/joyfill-docs/edit/main/',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        docs: false, // Disable the default docs plugin
+        blog: false, // Disable blog
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,27 +88,42 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Joyfill Docs',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Joyfill Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'dropdown',
+          label: 'SDK',
           position: 'left',
-          label: 'Tutorial',
+          items: [
+            {
+              label: 'iOS',
+              to: '/ios/introduction',
+            },
+            {
+              label: 'Kotlin',
+              to: '/kotlin/introduction',
+            },
+            {
+              label: 'React Native',
+              to: '/react-native/introduction',
+            },
+            {
+              label: 'Web',
+              to: '/web/introduction',
+            },
+          ],
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/joyfill',
           label: 'GitHub',
           position: 'right',
         },
@@ -99,11 +133,36 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'SDKs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'iOS SDK',
+              to: '/ios/introduction',
+            },
+            {
+              label: 'Kotlin SDK',
+              to: '/kotlin/introduction',
+            },
+            {
+              label: 'React Native SDK',
+              to: '/react-native/introduction',
+            },
+            {
+              label: 'Web SDK',
+              to: '/web/introduction',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'API Reference',
+              to: '/ios/api-reference/functions/overview',
+            },
+            {
+              label: 'Guides',
+              to: '/ios/guides/modes/modes',
             },
           ],
         },
@@ -111,38 +170,22 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/joyfill',
+            },
+            {
+              label: 'Support',
+              href: 'https://joyfill.io/support',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Joyfill, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['swift', 'kotlin', 'typescript', 'javascript'],
     },
   } satisfies Preset.ThemeConfig,
 };
