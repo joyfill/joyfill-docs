@@ -1,41 +1,153 @@
-# Website
+# Joyfill Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Official documentation for Joyfill SDKs across all platforms.
 
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
+## 🚀 Quick Start
 
 ```bash
-yarn start
+npm install
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+The documentation site will open at [http://localhost:3000](http://localhost:3000)
 
-## Build
+## 📚 Available SDKs
+
+- **iOS SDK** - Native Swift SDK for iOS applications
+- **Kotlin SDK** - Native Kotlin SDK for Android applications
+- **React Native SDK** - Cross-platform SDK for mobile apps
+- **Web SDK** - Framework-agnostic SDK for web applications
+
+## 📁 Project Structure
+
+```
+joyfill-docs/
+├── docs/
+│   ├── ios/               # iOS SDK documentation
+│   ├── kotlin/            # Kotlin SDK documentation
+│   ├── react-native/      # React Native SDK documentation
+│   └── web/               # Web SDK documentation
+├── src/
+│   ├── components/        # React components
+│   ├── css/              # Custom styling
+│   └── pages/            # Custom pages
+├── static/               # Static assets
+└── docusaurus.config.ts  # Docusaurus configuration
+```
+
+## 📝 Documentation Structure
+
+Each SDK includes:
+
+- **Getting Started** - Installation and quick start guide
+- **Guides** - Feature-specific guides:
+  - Modes
+  - Image Upload Handling
+  - Required Field Validation
+  - Populating and Extracting Data
+  - Schema Validation
+  - Event Handling
+- **API Reference** - Functions and Classes
+- **Changelogs** - Release notes
+- **About** - Security and compliance
+- **Examples** - Sample projects
+
+## 🛠️ Development
+
+### Build
 
 ```bash
-yarn build
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+### Serve locally
 
 ```bash
-USE_SSH=true yarn deploy
+npm run serve
 ```
 
-Not using SSH:
+### Clear cache
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run clear
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## 🌐 Deployment
+
+The site is built using Docusaurus 3 and can be deployed to:
+
+- GitHub Pages
+- Vercel
+- Netlify
+- AWS Amplify
+
+## 📖 Writing Documentation
+
+### Adding New Pages
+
+1. Create a new `.md` or `.mdx` file in the appropriate SDK directory
+2. Add front matter (optional):
+```markdown
+---
+title: My Page Title
+description: Page description
+---
+```
+
+### Using MDX Features
+
+Import and use React components in your documentation:
+
+```mdx
+import MyComponent from '@site/src/components/MyComponent';
+
+<MyComponent />
+```
+
+### Code Blocks
+
+```swift
+// Swift example
+let joyfill = Joyfill(apiKey: "your-api-key")
+```
+
+```kotlin
+// Kotlin example
+val joyfill = Joyfill("your-api-key")
+```
+
+```typescript
+// TypeScript example
+const joyfill = new Joyfill('your-api-key');
+```
+
+## 🔧 Configuration
+
+The main configuration is in `docusaurus.config.ts`. Key features:
+
+- **Multi-SDK Support** - Separate doc plugins for each SDK
+- **SDK Dropdown** - Easy navigation between SDKs
+- **Syntax Highlighting** - Support for Swift, Kotlin, TypeScript, JavaScript
+- **Dark Mode** - Respects system preferences
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and build
+5. Submit a pull request
+
+## 📄 License
+
+Copyright © 2025 Joyfill, Inc.
+
+## 🔗 Links
+
+- **Website**: https://joyfill.io
+- **GitHub**: https://github.com/joyfill
+- **Support**: https://joyfill.io/support
+
+---
+
+Built with ❤️ using [Docusaurus](https://docusaurus.io/)
